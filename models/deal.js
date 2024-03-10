@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const soldVehicleSchema = new mongoose.Schema({
-  vehicle_id: {
+const dealSchema = new mongoose.Schema({
+  deal_id: {
     type: String,
     required: true,
     unique: true,
@@ -10,12 +10,12 @@ const soldVehicleSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  vehicle_info: {
+  deal_info: {
     type: mongoose.Schema.Types.Mixed,
     default: {},
   },
 });
 
-const SoldVehicle = mongoose.model("SoldVehicle", soldVehicleSchema);
+const Deal = mongoose.model("Deal", dealSchema);
 
-module.exports = SoldVehicle;
+module.exports = Deal;

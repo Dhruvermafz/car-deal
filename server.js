@@ -18,6 +18,14 @@ app.use(express.urlencoded({ extended: true }));
 connectToMongoDB()
   .then(() => {
     console.log("Connected to MongoDB");
+
+    // Routes
+    app.use("/api", userRoutes);
+    app.use("/api", dealershipRoutes);
+    app.use("/api", soldVehicleRoutes);
+
+    // Error handling middleware
+    app.use(errorHandler);
     // Start the server
     app.listen(process.env.PORT || 3000, () => {
       console.log(`Server is running on port ${process.env.PORT || 3000}`);

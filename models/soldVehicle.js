@@ -1,10 +1,7 @@
-// models/SoldVehicle.js
-
-import mongoose from "mongoose";
-
+const mongoose = require("mongoose");
 const soldVehicleSchema = new mongoose.Schema({
   carId: { type: mongoose.Schema.Types.ObjectId, ref: "Car", required: true },
-  vehicleInfo: { type: Object }, // You may need to specify a schema for vehicle info
+  vehicleInfo: { type: Object },
 });
 
 const SoldVehicle = mongoose.model("SoldVehicle", soldVehicleSchema);

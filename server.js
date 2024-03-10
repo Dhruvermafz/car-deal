@@ -1,8 +1,6 @@
-// index.js
-
-import express from "express";
-import dotenv from "dotenv"; // For managing environment variables
-import { connectToMongoDB } from "./utils/mongo"; // Function to connect to MongoDB
+const express = require("express");
+const dotenv = require("dotenv");
+const connectToMongoDB = require("./utils/mongo");
 
 // Load environment variables from .env file
 dotenv.config();

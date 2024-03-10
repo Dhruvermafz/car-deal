@@ -1,10 +1,8 @@
-// controllers/authController.js
-
-import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
-import { validationResult } from "express-validator";
-import { User, Dealership } from "../models";
-
+const User = require("../models/user");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+const Dealership = require("../models/dealership");
+const validationResult = require("express-validator");
 const generateJWT = (payload) => {
   return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" });
 };

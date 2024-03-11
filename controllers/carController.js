@@ -1,4 +1,4 @@
-const { Car } = require("../models"); // Import the Car model
+const Car = require("../models/car"); // Import the Car model
 
 const addCar = async (carData) => {
   try {

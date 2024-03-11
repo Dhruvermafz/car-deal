@@ -1,4 +1,4 @@
-const { SoldVehicle } = require("../models"); // Import the SoldVehicle model
+const SoldVehicle = require("../models/soldVehicle"); // Import the SoldVehicle model
 
 // Function to add a sold vehicle
 const addSoldVehicle = async (soldVehicleData) => {

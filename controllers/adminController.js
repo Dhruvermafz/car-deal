@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const { Admin } = require("../models");
+const Admin = require("../models/admin");
 
 // Function to authenticate admin
 const authenticateAdmin = async (admin_id, password) => {

@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-
-const { User } = require("../models"); // Import the User model
+const User = require("../models/user");
 
 // Function to authenticate user
 const authenticateUser = async (user_email, password) => {

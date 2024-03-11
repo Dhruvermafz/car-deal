@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const { Dealership } = require("../models");
+const Dealership = require("../models/dealership");
 
 // Function to authenticate dealership
 const authenticateDealership = async (dealership_email, password) => {

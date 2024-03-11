@@ -1,4 +1,4 @@
-const { Deal } = require("../models");
+const Deal = require("../models/deal");
 // Function to add a new deal
 const addDeal = async (dealData) => {
   try {

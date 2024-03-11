@@ -1,6 +1,6 @@
 import React from "react";
 import { ApolloConsumer } from "react-apollo";
-import { useNavigate as withRouter } from "react-router-dom";
+import { withRouter } from "../../router";
 import { useToast, Button } from "@chakra-ui/react";
 import { FaSignOutAlt } from "react-icons/fa";
 

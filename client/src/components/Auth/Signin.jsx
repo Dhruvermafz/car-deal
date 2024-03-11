@@ -2,7 +2,8 @@ import React, { Fragment, useState } from "react";
 import { Mutation } from "react-apollo";
 import { SIGNIN_USER } from "../../queries";
 import Error from "../Error";
-import { useNavigate as withRouter } from "react-router-dom";
+import { withRouter } from "../../router";
+
 import {
   Button,
   Checkbox,
@@ -34,6 +35,8 @@ const Signin = ({ history }) => {
       history.push("/profile");
     } catch (err) {
       setError(err.message);
+      // Clear password field on error
+      setFormData({ ...formData, password: "" });
     }
   };
 

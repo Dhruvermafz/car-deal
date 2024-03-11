@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Mutation } from "react-apollo";
 import { SIGNUP_USER } from "../../queries";
 import Error from "../Error";
-import { useNavigate as withRouter } from "react-router-dom";
+import { withRouter } from "../../router";
 import {
   Box,
   Button,

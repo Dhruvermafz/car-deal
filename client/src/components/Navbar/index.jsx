@@ -1,7 +1,7 @@
 import { Box, Flex, Link } from "@chakra-ui/react";
 import React from "react";
-import { NavbarAuth as Auth } from "./NavbarAuth";
-import { NavbarUnAuth as UnAuth } from "./NavbarUnAuth";
+import NavbarAuth from "./NavbarAuth";
+import NavbarUnAuth from "./NavbarUnAuth";
 const Navbar = ({ session }) => (
   <nav>
     <Flex align="center" justify="space-between" p="4">
@@ -10,7 +10,9 @@ const Navbar = ({ session }) => (
           Autocar
         </Link>
       </Box>
-      <Box>{session && session.getCurrentUser ? <Auth /> : <UnAuth />}</Box>
+      <Box>
+        {session && session.getCurrentUser ? <NavbarAuth /> : <NavbarUnAuth />}
+      </Box>
     </Flex>
   </nav>
 );
